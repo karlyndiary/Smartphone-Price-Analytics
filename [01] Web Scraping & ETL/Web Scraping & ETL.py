@@ -10,119 +10,105 @@ HEADERS = ({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 
 titles = []
 prices = []
-discount_percent = []
+original_prices = []
+discounts = []
 stars = []
-rating = []
-total_purchased = []
-deal = []
-device_setup = []
-
-for i in range(1, 60):  # Loop through pages
-    url = f"https://www.amazon.in/s?k=laptop&page={i}&crid=1UZ5CBGVB07U6&qid=1721162014&sprefix=laptop%2Caps%2C309&ref=sr_pg_{i}"
+reviews = [] 
+description = []
     
-    # HTTP request
+for i in range(1, 11):
+    url = f"https://www.flipkart.com/search?q=phones&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page={i}"
     r = requests.get(url, headers=HEADERS)
+    soup = BeautifulSoup(r.text, "lxml")
+    box = soup.find('div', class_='DOjaWF gdgoEp')
     
-    # Soup object containing all data
-    soup = BeautifulSoup(r.text, "html.parser")
+    def get_titles(box):
+        try:
+            titles = [t.text for t in box.find_all('div', class_='KzDlHZ')]
+        except AttributeError:
+            titles = []
+        return titles
+
+    def get_prices(box):
+        try:
+            prices = [p.text for p in box.find_all('div', class_='Nx9bqj _4b5DiR')]
+        except AttributeError:
+            prices = []
+        return prices
     
-    # Find all product boxes
-    boxes = soup.find_all("div", attrs={"data-component-type": "s-search-result"})
+    def get_original_prices(box):
+        try:
+            original_prices = [o.text for o in box.find_all('div', class_='yRaY8j ZYYwLA')]
+        except AttributeError:
+            original_prices = []
+        return original_prices
+
+    def get_discounts(box):
+        try:
+            discounts = [d.text for d in box.find_all('div', class_='UkUFwK')]
+        except AttributeError:
+            discounts = []
+        return discounts
     
-    for box in boxes:
-        # Function to return product title
-        def get_title(box):
-            try:
-                title = box.h2.a.text.strip()
-            except AttributeError:
-                title = "No title found"
-            return title
-        
-        # Function to return product price
-        def get_price(box):
-            try:
-                price = box.find("span", "a-price").text
-            except AttributeError:
-                price = "No price found"
-            return price
-
-        # Function to return discount percent
-        def get_discount_percent(box):
-            try:
-                discount_percent = box.find("span", text=lambda x: x and 'off' in x).text
-            except AttributeError:
-                discount_percent = "No discount found"
-            return discount_percent
-        
-        # Function to return product rating
-        def get_stars(box):
-            try:
-                stars = box.find("span", "a-icon-alt").text
-            except AttributeError:
-                stars = "No rating"
-            return stars
-
-        # Function to return rating
-        def get_rating(box):
-            try:
-                rating = box.find("span", attrs={"class": "a-size-base s-underline-text"}).text
-            except AttributeError:
-                rating = "No data"
-            return rating
-            
-        # Function to return total number of purchases
-        def get_total_purchased(box):
-            try:
-                total_purchased = box.find("div", attrs={"class": "a-row a-size-base"}).find("span", attrs={"class": "a-size-base a-color-secondary"}).text
-            except AttributeError:
-                total_purchased = "No data"
-            return total_purchased
-
-        # Function to return deal
-        def get_deal(box):
-            try:
-                deal = box.find("span", attrs={"class": "a-truncate-full"}).text
-            except AttributeError:
-                deal = "No data"
-            return deal
-
-        # Function to return delivery type
-        def get_device_setup(box):
-            try:
-                device_setup = box.find("div", attrs={"class": "a-section a-spacing-none a-spacing-top-mini"}).find("div", attrs={"class": "a-row a-size-base a-color-secondary"}).text.strip()
-            except AttributeError:
-                device_setup = "No data"
-            return device_setup
-        
-        # Append data to respective lists
-        titles.append(get_title(box))
-        prices.append(get_price(box))
-        discount_percent.append(get_discount_percent(box))
-        stars.append(get_stars(box))
-        rating.append(get_rating(box))
-        total_purchased.append(get_total_purchased(box))
-        deal.append(get_deal(box))
-        device_setup.append(get_device_setup(box))
+    def get_stars(box):
+        try:
+            stars = [s.text for s in box.find_all('div', class_='XQDdHH')]
+        except AttributeError:
+            stars = []
+        return stars
     
-    # Respectful delay between requests
-    time.sleep(2)
+    def get_reviews(box):
+        try:
+            reviews = [r.text for r in box.find_all('span', class_='Wphh3N')]
+        except AttributeError:
+            reviews = []
+        return reviews
+    
+    def get_descs(box):
+        try:
+            descs = [d.text for d in box.find_all('ul', class_='G4BRas')]
+        except AttributeError:
+            descs = []
+        return descs
+    
+    titles.extend(get_titles(box))
+    prices.extend(get_prices(box))
+    original_prices.extend(get_original_prices(box))
+    discounts.extend(get_discounts(box))
+    stars.extend(get_stars(box))
+    reviews.extend(get_reviews(box))
+    description.extend(get_descs(box))
 
-# Creating DataFrame and saving to CSV
+# Determine the maximum length
+max_len = max(len(titles), len(prices), len(original_prices), len(discounts), len(stars), len(reviews), len(description))
+
+# Pad lists to ensure they have the same length
+def pad_list(lst, length, pad_value=None):
+    return lst + [pad_value] * (length - len(lst))
+
+titles = pad_list(titles, max_len)
+prices = pad_list(prices, max_len)
+original_prices = pad_list(original_prices, max_len)
+discounts = pad_list(discounts, max_len)
+stars = pad_list(stars, max_len)
+reviews = pad_list(reviews, max_len)
+description = pad_list(description, max_len)
+
+# Create DataFrame
 df = pd.DataFrame({
-    "product_name": titles,
-    "prices": prices,
-    "discount_percent": discount_percent,
-    "stars": stars,
-    "rating": rating,
-    "total_purchased": total_purchased,
-    "deal": deal,
-    "device_setup": device_setup
+    'title': titles,
+    'price': prices,
+    'original_price': original_prices,
+    'discount': discounts,
+    'star': stars,
+    'review': reviews,
+    'description': description
 })
 
-df.to_csv("amazon_products_dataset.csv", index=False)
+df.to_csv('phones.csv')
 
 server = 'localhost'
-database = 'Amazon'
+database = 'Flipkart'
 username = 'your_username'
 password = 'your_password'
 
@@ -138,7 +124,7 @@ except Exception as e:
     print(f"Connection failed: {e}")
 
 # Load data into SQL Server
-table_name = 'Laptops'
+table_name = 'Phones'
 try:
     df.to_sql(table_name, engine, if_exists='append', index=False)
     print("Data loaded successfully!")
