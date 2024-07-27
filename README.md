@@ -1,4 +1,4 @@
-# Amazon Web Scraping Analysis
+# Flipkart Web Scraping Analysis
 
 ## Table of Contents
 * [Business Problem](#business-problem)
