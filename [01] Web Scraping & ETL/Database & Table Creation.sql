@@ -1,15 +1,14 @@
-CREATE DATABASE Amazon;
+CREATE DATABASE Flipkart;
 
-USE Amazon;
+USE Flipkart;
 
 CREATE TABLE Laptops (
-    id INT IDENTITY(1,1) PRIMARY KEY,
-    product_name NVARCHAR(255),
-    prices NVARCHAR(50),
-    discount_percent NVARCHAR(50),
-    stars NVARCHAR(50),
-    rating NVARCHAR(50),
-    total_purchased NVARCHAR(100),
-    deal NVARCHAR(100),
-    device_setup NVARCHAR(50)
+    id INT PRIMARY KEY,
+    title NVARCHAR(255),
+    price NVARCHAR(10),
+    original_price NVARCHAR(10),
+    discount NVARCHAR(10),
+    star NVARCHAR(10),
+    review NVARCHAR(50),
+    description NVARCHAR(255)
 );
