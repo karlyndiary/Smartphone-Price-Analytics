@@ -2,8 +2,8 @@
   
 Use Flipkart
 
-CREATE TABLE PhonesDetails (
-    id INT PRIMARY KEY,
+CREATE TABLE PhoneDetails (
+    id INT IDENTITY(1,1) PRIMARY KEY,
     title VARCHAR(255),
     price INT,
     original_price INT,
