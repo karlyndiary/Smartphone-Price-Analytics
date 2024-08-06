@@ -2,6 +2,10 @@
 ```
 =COUNTA(UNIQUE(Data!G2:G))
 ```
+- Count of Products
+```
+=COUNTA(Data!B2:B)
+```
 - Lowest Price
 ```
 =MIN(Data!C:C)
@@ -10,21 +14,17 @@
 ```
 =MAX(Data!C:C)
 ```
+- Average Price
+```
+=AVERAGE(Data!C2:C)
+```
 - Average Discount %
 ```
 =AVERAGE(Data!E2:E)
 ```
-- Count of Products
-```
-=COUNTA(Data!B2:B)
-```
 - Average Rating
 ```
 =AVERAGE(Data!Q2:Q)
-```
-- Average Price
-```
-=AVERAGE(Data!C2:C)
 ```
 - Count of Reviews
 ```
