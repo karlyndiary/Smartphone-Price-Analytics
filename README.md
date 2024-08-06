@@ -12,9 +12,9 @@
 Developing a phones price analysis and recommendation system to optimize sales and customer satisfaction through informed pricing strategies.
 
 ## Tools Used
-- Python: For Web Scraping and ETL.
-  - Phones 
-- SQL: For data cleaning and querying the required data.
+- Python: For Web Scraping, Data Cleaning and ETL.
+  - Phones
+- SQL: For querying the required data.
 - Google Sheets: Dashboard Data Visualizations.
 
 ## Data Description
