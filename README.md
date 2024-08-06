@@ -38,3 +38,4 @@ Developing a phones price analysis and recommendation system to optimize sales a
 - review: Customer review of the product
 
 ## Dashboard
+![Flipkart Dashboard](https://github.com/user-attachments/assets/ef778ca9-ed08-4668-9427-059f61ab9424)
