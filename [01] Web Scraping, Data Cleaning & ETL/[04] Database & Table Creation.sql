@@ -24,5 +24,7 @@ CREATE TABLE Phones (
     processor VARCHAR(100),
     battery VARCHAR(100),
     rating INT,
-    review INT
+    review INT,
+    rear_camera VARCHAR(50),
+    front_camera VARCHAR(50)
 );
