@@ -3,7 +3,7 @@ import pyodbc
 from sqlalchemy import create_engine
 import urllib
 
-df = pd.read_csv(r'C:\UsersKaren Fernandes\anaconda3\Files\Projects\Flipkart Web Scraping\cleaned_phones_dataset.csv')
+df = pd.read_csv(r'C:\Users\Karen Fernandes\anaconda3\Files\Projects\Flipkart Web Scraping\cleaned_phones_dataset.csv')
 df.head(2)
 
 # drop Unnamed: 0 column
