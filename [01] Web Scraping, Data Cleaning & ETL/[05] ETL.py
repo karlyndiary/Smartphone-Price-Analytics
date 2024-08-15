@@ -3,13 +3,13 @@ import pyodbc
 from sqlalchemy import create_engine
 import urllib
 
-df = pd.read_csv(r'C:\Users\KAREN J FERNANDES\anaconda3\Files\Projects\Flipkart Web Scraping\cleaned_phones_dataset.csv')
+df = pd.read_csv(r'C:\UsersKaren Fernandes\anaconda3\Files\Projects\Flipkart Web Scraping\cleaned_phones_dataset.csv')
 df.head(2)
 
 # drop Unnamed: 0 column
 df.drop(columns=['Unnamed: 0'], inplace=True)
 
-server = 'localhost'
+server = 'LAPTOP-68P3K4HH\SQLEXPRESS'
 database = 'Flipkart'
 username = 'your_username'
 password = 'your_password'
