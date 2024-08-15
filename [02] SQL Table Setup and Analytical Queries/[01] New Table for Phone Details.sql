@@ -12,6 +12,8 @@ CREATE TABLE PhoneDetails (
     brand VARCHAR(100),
     model VARCHAR(100),
     camera VARCHAR(100),
+    front_camera VARCHAR(50),
+    rear_camera VARCHAR(50),
     screen_size_inch FLOAT,
     display VARCHAR(100),
     ram VARCHAR(50),
