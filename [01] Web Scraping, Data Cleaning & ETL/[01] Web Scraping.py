@@ -13,8 +13,8 @@ stars = []
 reviews = [] 
 description = []
     
-for i in range(1, 11):
-    url = f"https://www.flipkart.com/search?q=phones&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page={i}"
+for i in range(0, 40):
+    url = f"https://www.flipkart.com/search?q=smartphones&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&sort=relevance&p%5B%5D=facets.type%255B%255D%3DSmartphones&p%5B%5D=facets.availability%255B%255D%3DExclude%2BOut%2Bof%2BStock&page={i}"
     r = requests.get(url, headers=HEADERS)
     soup = BeautifulSoup(r.text, "lxml")
     box = soup.find('div', class_='DOjaWF gdgoEp')
