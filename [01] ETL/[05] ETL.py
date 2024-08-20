@@ -6,7 +6,7 @@ import urllib
 df = pd.read_csv(r'C:\Users\Karen Fernandes\anaconda3\Files\Projects\Flipkart Web Scraping\cleaned_phones_dataset.csv')
 df.head(2)
 
-# drop Unnamed: 0 column
+# rename Unnamed: 0 column to id
 df.rename(columns={'Unnamed: 0': 'id'}, inplace=True)
 
 server = 'LAPTOP-68P3K4HH\SQLEXPRESS'
