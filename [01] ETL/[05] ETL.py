@@ -7,7 +7,7 @@ df = pd.read_csv(r'C:\Users\Karen Fernandes\anaconda3\Files\Projects\Flipkart We
 df.head(2)
 
 # drop Unnamed: 0 column
-df.drop(columns=['Unnamed: 0'], inplace=True)
+df.rename(columns={'Unnamed: 0': 'id'}, inplace=True)
 
 server = 'LAPTOP-68P3K4HH\SQLEXPRESS'
 database = 'Flipkart'
