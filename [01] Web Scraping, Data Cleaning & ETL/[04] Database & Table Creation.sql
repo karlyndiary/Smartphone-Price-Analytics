@@ -17,14 +17,13 @@ CREATE TABLE Phones (
     screen_size_cm FLOAT,
     screen_size_inch FLOAT,
     display VARCHAR(100),
-    ram VARCHAR(50),
-    storage VARCHAR(50),
-    expandable_storage VARCHAR(50),
+    ram INT,
+    storage INT,
     color VARCHAR(50),
     processor VARCHAR(100),
-    battery VARCHAR(100),
+    battery INT,
     rating INT,
     review INT,
-    rear_camera VARCHAR(50),
-    front_camera VARCHAR(50)
+    rear_camera INT,
+    front_camera INT
 );
