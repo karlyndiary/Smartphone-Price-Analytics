@@ -1,0 +1,8 @@
+- Open Excel 
+- Data
+  - Get Data
+  - From Database
+  - From SQL Server Database
+- Enter the Server Name and Database
+- Select the Table
+- Click on Load
