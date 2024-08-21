@@ -7,15 +7,15 @@
 * [Dashboard](#dashboard)
 
 ## Business Problem: 
-### Phone Price Optimization Analysis
+**Analyzing Key Factors Affecting Smartphone Prices to Optimize Product Offerings**
 
-Developing a phones price analysis and recommendation system to optimize sales and customer satisfaction through informed pricing strategies.
+Your goal is to analyze the dataset of smartphone features to determine the key factors that influence smartphone prices. This analysis will help a smartphone manufacturer or retailer understand which features most impact pricing and identify any patterns or trends that could be leveraged for product development, pricing strategies, and marketing campaigns.
 
 ## Tools Used
 - Python: For Web Scraping, Data Cleaning and ETL.
   - Phones
 - SQL: For querying the required data.
-- Google Sheets: Dashboard Data Visualizations.
+- Microsoft Excel: Dashboard Data Visualizations.
 
 ## Data Description
 - id: Primary Key of the phone
@@ -26,7 +26,8 @@ Developing a phones price analysis and recommendation system to optimize sales a
 - star: Number of stars the product has received
 - brand: Brand name
 - model: Model name of the phone
-- camera: Camera quality
+- front_camera: Camera quality
+- rear_camera: Camera quality
 - screen_size_inch: Size of the phone screen
 - display: Full HD+, HD or other types
 - ram: Amount of RAM in the phone
@@ -38,4 +39,3 @@ Developing a phones price analysis and recommendation system to optimize sales a
 - review: Customer review of the product
 
 ## Dashboard
-![Flipkart Dashboard](https://github.com/user-attachments/assets/ef778ca9-ed08-4668-9427-059f61ab9424)
