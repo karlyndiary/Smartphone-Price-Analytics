@@ -1,4 +1,4 @@
-# Flipkart Web Scraping Analysis
+# Smartphone Price Analytics: Key Factors and Market Trends
 
 ## Table of Contents
 * [Business Problem](#business-problem)
