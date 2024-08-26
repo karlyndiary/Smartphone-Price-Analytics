@@ -20,7 +20,7 @@ CREATE TABLE Phones (
     color VARCHAR(50),
     processor VARCHAR(100),
     battery INT,
-    average_rating INT,
+    average_rating FLOAT,
     rear_camera INT,
     front_camera INT
 );
