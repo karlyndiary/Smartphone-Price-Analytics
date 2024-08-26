@@ -1,32 +1,24 @@
 - Count of Unique Brands
 ```
-=COUNTA(UNIQUE(PhonesView!F2:F316))
+=COUNTA(UNIQUE(PhonesView!C2:C526))
 ```
 - Count of Products
 ```
-=COUNTA(UNIQUE(PhonesView!B2:B316))
+=COUNTA(UNIQUE(PhonesView!A2:A526))
 ```
 - Lowest Price
 ```
-=MIN(PhonesView!C2:C316)
+=MIN(PhonesView!F2:F526)
 ```
 - Highest Price
 ```
-=MAX(PhonesView!C2:C316)
+=MAX(PhonesView!F2:F526)
 ```
 - Average Price
 ```
-=AVERAGE(PhonesView!C2:C316)
-```
-- Average Discount %
-```
-=AVERAGE(PhonesView!D2:D316)
+=AVERAGE(PhonesView!F2:F526)
 ```
 - Average Rating
 ```
-=AVERAGE(PhonesView!Q2:Q316)
-```
-- Average Count of Reviews
-```
-=AVERAGE(PhonesView!R2:R316)
+=AVERAGE(PhonesView!Q2:Q)
 ```
