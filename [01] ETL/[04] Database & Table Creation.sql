@@ -3,18 +3,16 @@ CREATE DATABASE Flipkart;
 USE Flipkart;
 
 CREATE TABLE Phones (
-    id INT PRIMARY KEY,
-    title VARCHAR(255),
-    price INT,
-    original_price INT,
-    discount INT,
-    star FLOAT,
-    ratings_reviews VARCHAR(500),
-    description TEXT,
+    pid INT PRIMARY KEY,
     brand VARCHAR(100),
+    title VARCHAR(255),
+    stock VARCHAR(50),
+    highlights TEXT,
+    mrp INT,
+    price INT,
+    rating VARCHAR(200),
+    images VARCHAR(200),
     model VARCHAR(100),
-    camera VARCHAR(100),
-    screen_size_cm FLOAT,
     screen_size_inch FLOAT,
     display VARCHAR(100),
     ram INT,
@@ -22,8 +20,7 @@ CREATE TABLE Phones (
     color VARCHAR(50),
     processor VARCHAR(100),
     battery INT,
-    rating INT,
-    review INT,
+    average_rating INT,
     rear_camera INT,
     front_camera INT
 );
