@@ -3,7 +3,7 @@ CREATE DATABASE Flipkart;
 USE Flipkart;
 
 CREATE TABLE Phones (
-    pid INT PRIMARY KEY,
+    pid VARCHAR(100) PRIMARY KEY,
     brand VARCHAR(100),
     title VARCHAR(255),
     stock VARCHAR(50),
@@ -11,7 +11,7 @@ CREATE TABLE Phones (
     mrp INT,
     price INT,
     rating VARCHAR(200),
-    images VARCHAR(200),
+    images NVARCHAR(MAX),
     model VARCHAR(100),
     screen_size_inch FLOAT,
     display VARCHAR(100),
