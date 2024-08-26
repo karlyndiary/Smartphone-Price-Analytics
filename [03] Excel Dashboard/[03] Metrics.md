@@ -20,5 +20,5 @@
 ```
 - Average Rating
 ```
-=AVERAGE(PhonesView!Q2:Q)
+=AVERAGE(PhonesView!R2:R526)
 ```
