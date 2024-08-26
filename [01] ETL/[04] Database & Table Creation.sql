@@ -11,7 +11,7 @@ CREATE TABLE Phones (
     mrp INT,
     price INT,
     rating VARCHAR(200),
-    images NVARCHAR(MAX),
+    first_image_url VARCHAR(200),
     model VARCHAR(100),
     screen_size_inch FLOAT,
     display VARCHAR(100),
