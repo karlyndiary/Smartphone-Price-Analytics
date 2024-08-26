@@ -12,13 +12,13 @@
 Your goal is to analyze the dataset of smartphone features to determine the key factors that influence smartphone prices. This analysis will help a smartphone manufacturer or retailer understand which features most impact pricing and identify any patterns or trends that could be leveraged for product development, pricing strategies, and marketing campaigns.
 
 ## Tools Used
-- Python: For Web Scraping, Data Cleaning and ETL.
-  - Phones
+- Python: For API Data Extraction, Data Cleaning and ETL.
+  - Phones: https://rapidapi.com/opendatapoint-opendatapoint-default/api/real-time-flipkart-api
 - SQL: For querying the required data.
 - Microsoft Excel: Dashboard Data Visualizations.
 
 ## Data Description
-- id: Primary Key of the phone
+- pid: Primary Key of the phone
 - title: Name of the phone listing
 - price: Current price of the phone
 - original_price: Original price of the phone
