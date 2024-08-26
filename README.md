@@ -20,14 +20,12 @@ Your goal is to analyze the dataset of smartphone features to determine the key 
 ## Data Description
 - pid: Primary Key of the phone
 - title: Name of the phone listing
-- price: Current price of the phone
-- original_price: Original price of the phone
-- discount: Discount percentage
-- star: Number of stars the product has received
 - brand: Brand name
+- stock: Availability of the phone
+- mrp: Original price of the phone
+- price: Current price of the phone
+- image: image url of the product
 - model: Model name of the phone
-- front_camera: Camera quality
-- rear_camera: Camera quality
 - screen_size_inch: Size of the phone screen
 - display: Full HD+, HD or other types
 - ram: Amount of RAM in the phone
@@ -35,7 +33,8 @@ Your goal is to analyze the dataset of smartphone features to determine the key 
 - color: Color of the phone
 - processor: Brand of the processor
 - battery: Battery Capacity
-- rating: Customer rating of the product
-- review: Customer review of the product
+- rating: Number of stars the product has received
+- front_camera: Camera quality
+- rear_camera: Camera quality
 
 ## Dashboard
