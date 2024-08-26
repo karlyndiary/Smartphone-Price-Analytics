@@ -3,8 +3,7 @@ import pyodbc
 from sqlalchemy import create_engine
 import urllib
 
-df = pd.read_csv(r'C:\Users\Karen Fernandes\anaconda3\Files\Projects\Web Scraping\cleaned_phones_dataset.csv')
-df.head(2)
+df = pd.read_csv(r'C:\Users\Karen Fernandes\anaconda3\Files\Projects\Flipkart API\cleaned_phones_dataset.csv')
 
 # rename Unnamed: 0 column to id
 df.rename(columns={'Unnamed: 0': 'id'}, inplace=True)
