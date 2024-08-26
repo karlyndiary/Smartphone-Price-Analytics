@@ -1,6 +1,6 @@
 # Querying the required columns for analysis
   
 CREATE VIEW [dbo].[PhonesView] AS
-SELECT [id] ,[title] ,[price] ,[discount] ,[star] ,[brand] ,[model] ,[screen_size_inch] as screen_size ,[display] ,[ram] ,[storage]
-      ,[color] ,[processor] ,[battery] ,[rear_camera] ,[front_camera] ,[rating] ,[review]
+SELECT [pid], [title], [brand], [stock], [mrp], [price], [first_image_url] as image, [model], [screen_size_inch] as screen_size, [display], 
+	   [ram], [storage], [color], [processor], [battery], [average_rating] as rating, [rear_camera], [front_camera]
   FROM [Flipkart].[dbo].[Phones]
