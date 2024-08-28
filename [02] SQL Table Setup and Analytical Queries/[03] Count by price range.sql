@@ -1,0 +1,1 @@
+-- How many phones fall into each price range (Low, Mid, High)?
