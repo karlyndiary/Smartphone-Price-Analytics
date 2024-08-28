@@ -3,4 +3,4 @@
 SELECT title, battery
 FROM [Flipkart].[dbo].[PhonesView]
 WHERE battery > (SELECT avg(battery)
-				 FROM [Flipkart].[dbo].[PhonesView])
+		 FROM [Flipkart].[dbo].[PhonesView])
