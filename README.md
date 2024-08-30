@@ -13,7 +13,7 @@ Your goal is to analyze the dataset of smartphone features to determine the key 
 
 ## Tools Used
 - Python: For API Data Extraction, Data Cleaning and ETL.
-  - Phones: https://rapidapi.com/opendatapoint-opendatapoint-default/api/real-time-flipkart-api
+  - [RapidAPI - Phones](https://rapidapi.com/opendatapoint-opendatapoint-default/api/real-time-flipkart-api)
 - SQL: For querying the required data.
 - Microsoft Excel: Dashboard Data Visualizations.
 
