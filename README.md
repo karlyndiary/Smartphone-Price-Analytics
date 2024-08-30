@@ -38,3 +38,4 @@ Your goal is to analyze the dataset of smartphone features to determine the key 
 - rear_camera: Camera quality
 
 ## Dashboard
+![Flipkart Insights Dashboard](https://github.com/user-attachments/assets/27b23e7a-f6c6-4a66-b23d-3f31199b9bf0)
