@@ -7,9 +7,9 @@
 * [Dashboard](#dashboard)
 
 ## Business Problem: 
-**Analyzing Key Factors Affecting Smartphone Prices to Optimize Product Offerings**
+**Comprehensive Mobile Phone Market Analysis: Insights from Flipkart Data**
 
-Your goal is to analyze the dataset of smartphone features to determine the key factors that influence smartphone prices. This analysis will help a smartphone manufacturer or retailer understand which features most impact pricing and identify any patterns or trends that could be leveraged for product development, pricing strategies, and marketing campaigns.
+This analysis delves into the mobile phone market using Flipkart data to uncover key trends, factors influencing smartphone prices, and consumer preferences. By examining various features and pricing patterns, this study aims to provide valuable insights for product development, pricing strategies, and marketing campaigns. The goal is to help manufacturers and retailers make data-driven decisions to optimize their offerings and better meet market demands.
 
 ## Tools Used
 - Python: For API Data Extraction, Data Cleaning and ETL.
