@@ -5,6 +5,7 @@
 * [Tools Used](#tools-used)
 * [Data Description](#data-description)
 * [Dashboard](#dashboard)
+* [Summary of Insights](#summary-of-insights)
 
 ## Business Problem: 
 **Comprehensive Mobile Phone Market Analysis: Insights from Flipkart Data**
@@ -39,6 +40,8 @@ This analysis delves into the mobile phone market using Flipkart data to uncover
 
 ## Dashboard
 ![Flipkart Insights Dashboard](https://github.com/user-attachments/assets/27b23e7a-f6c6-4a66-b23d-3f31199b9bf0)
+
+## Summary of Insights
 ### Price Distribution by Processor
 - Exynos has the highest price, indicating it may be positioned as a premium processor.
 - Tensor also has a significantly high price, suggesting it is a competitive option in the high-end market.
