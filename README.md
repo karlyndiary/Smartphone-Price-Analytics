@@ -39,3 +39,24 @@ This analysis delves into the mobile phone market using Flipkart data to uncover
 
 ## Dashboard
 ![Flipkart Insights Dashboard](https://github.com/user-attachments/assets/27b23e7a-f6c6-4a66-b23d-3f31199b9bf0)
+### Price Distribution by Processor
+- Exynos has the highest price, indicating it may be positioned as a premium processor.
+- Tensor also has a significantly high price, suggesting it is a competitive option in the high-end market.
+MediaTek and Unisoc have lower prices than Exynos and Tensor, indicating they may target a more budget-conscious segment.
+- The low price points across all processors are relatively close, suggesting a competitive entry-level market.
+
+### Market Share by Top 10 Brands
+Samsung leads the smartphone market with 17%, followed by Realme at 16% and Vivo at 13%. Redmi holds 12%, while Infinix and Motorola each have 10%. Poco captures 9%, Oppo has 6%, Tecno 4%, and Google trails at 3%. The top players are Samsung, Realme, and Vivo, with Google having the smallest share.
+
+### Premium vs Budget
+
+
+### Feature Contribution
+
+### Analysing Linear and Non-Linear Trends
+
+### Top 5 Phones by Brand and Rating
+
+### Stock Analysis
+
+### Brand Loyalty
